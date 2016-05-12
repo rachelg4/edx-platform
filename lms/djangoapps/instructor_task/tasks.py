@@ -130,11 +130,7 @@ def delete_problem_state(entry_id, xmodule_instance_args):
     return run_main_task(entry_id, visit_fcn, action_name)
 
 
-<<<<<<< HEAD
-@task(base=BaseInstructorTask, routing_key=settings.BULK_EMAIL_ROUTING_KEY)  # pylint: disable=E1102
-=======
-@task(base=BaseInstructorTask)
->>>>>>> kluo/2015-12-01
+@task(base=BaseInstructorTask, routing_key=settings.BULK_EMAIL_ROUTING_KEY)
 def send_bulk_course_email(entry_id, _xmodule_instance_args):
     """Sends emails to recipients enrolled in a course.
 
@@ -212,8 +208,7 @@ def calculate_students_features_csv(entry_id, xmodule_instance_args):
     return run_main_task(entry_id, task_fn, action_name)
 
 
-<<<<<<< HEAD
-@task(base=BaseInstructorTask, routing_key=settings.STUDENT_RESPONSES_DOWNLOAD_ROUTING_KEY)  # pylint: disable=E1102
+@task(base=BaseInstructorTask, routing_key=settings.STUDENT_RESPONSES_DOWNLOAD_ROUTING_KEY)
 def get_student_responses(entry_id, xmodule_instance_args):
     """
     Generate a CSV file of student responses to all course problems and store in S3.
@@ -223,7 +218,6 @@ def get_student_responses(entry_id, xmodule_instance_args):
     return run_main_task(entry_id, task_fn, action_name)
 
 
-# pylint: disable=not-callable
 @task(base=BaseInstructorTask, routing_key=settings.ORA2_RESPONSES_DOWNLOAD_ROUTING_KEY)
 def get_ora2_responses(entry_id, xmodule_instance_args):
     """
@@ -234,7 +228,6 @@ def get_ora2_responses(entry_id, xmodule_instance_args):
     return run_main_task(entry_id, task_fn, action_name)
 
 
-# pylint: disable=not-callable
 @task(base=BaseInstructorTask, routing_key=settings.COURSE_FORUMS_DOWNLOAD_ROUTING_KEY)
 def get_course_forums_usage(entry_id, xmodule_instance_args):
     """
@@ -255,10 +248,7 @@ def get_student_forums_usage(entry_id, xmodule_instance_args):
     return run_main_task(entry_id, task_fn, action_name)
 
 
-@task(base=BaseInstructorTask)  # pylint: disable=not-callable
-=======
 @task(base=BaseInstructorTask)
->>>>>>> kluo/2015-12-01
 def enrollment_report_features_csv(entry_id, xmodule_instance_args):
     """
     Compute student profile information for a course and upload the
