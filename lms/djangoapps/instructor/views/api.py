@@ -905,7 +905,6 @@ def list_course_role_members(request, course_id):
     return JsonResponse(response_payload)
 
 
-<<<<<<< HEAD
 def _build_course_tree(course):
     """
     Recursively builds a course tree given the root node to a course
@@ -1346,9 +1345,7 @@ def save_group_name(request, course_id):
     return JsonResponse(response_payload)
 
 
-=======
 @transaction.non_atomic_requests
->>>>>>> kluo/2015-12-01
 @ensure_csrf_cookie
 @cache_control(no_cache=True, no_store=True, must_revalidate=True)
 @require_level('staff')
