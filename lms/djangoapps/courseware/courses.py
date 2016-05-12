@@ -199,17 +199,6 @@ def get_course_about_section(request, course, section_key):
     # markup. This can change without effecting this interface when we find a
     # good format for defining so many snippets of text/html.
 
-<<<<<<< HEAD
-    # TODO: Remove number, instructors from this list
-    if section_key in ['short_description', 'description', 'key_dates', 'video',
-                       'course_staff_short', 'course_staff_extended',
-                       'requirements', 'syllabus', 'textbook', 'faq', 'more_info',
-                       'number', 'instructors', 'overview', 'about_sidebar_html',
-                       'effort', 'end_date', 'prerequisites', 'ocw_links',
-                       'pre_enrollment_email', 'post_enrollment_email',
-                       'pre_enrollment_email_subject', 'post_enrollment_email_subject']:
-
-=======
     # TODO: Remove number, instructors from this set
     html_sections = {
         'short_description',
@@ -229,11 +218,15 @@ def get_course_about_section(request, course, section_key):
         'effort',
         'end_date',
         'prerequisites',
-        'ocw_links'
+        'ocw_links',
+        'about_sidebar_html',
+        'pre_enrollment_email',
+        'post_enrollment_email',
+        'pre_enrollment_email_subject',
+        'post_enrollment_email_subject',
     }
 
     if section_key in html_sections:
->>>>>>> kluo/2015-12-01
         try:
             loc = course.location.replace(category='about', name=section_key)
 
