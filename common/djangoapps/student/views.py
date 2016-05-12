@@ -97,12 +97,8 @@ import track.views
 
 import dogstats_wrapper as dog_stats_api
 
-<<<<<<< HEAD
 from util.date_utils import get_default_time_display
-from util.db import commit_on_success_with_read_committed
-=======
 from util.db import outer_atomic
->>>>>>> kluo/2015-12-01
 from util.json_request import JsonResponse
 from util.bad_request_rate_limiter import BadRequestRateLimiter
 from util.keyword_substitution import substitute_keywords_with_data
