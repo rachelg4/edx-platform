@@ -48,6 +48,7 @@ from lms.djangoapps.lms_xblock.models import XBlockAsidesConfig
 from opaque_keys import InvalidKeyError
 from opaque_keys.edx.keys import UsageKey, CourseKey
 from opaque_keys.edx.locations import SlashSeparatedCourseKey
+from openedx.core.lib.inline_analytics_utils import add_inline_analytics
 from openedx.core.lib.xblock_utils import (
     replace_course_urls,
     replace_jump_to_id_urls,
@@ -78,12 +79,7 @@ from util.keyword_substitution import substitute_keywords_with_data
 from util.model_utils import slugify
 from util.sandboxing import can_execute_unsafe_code, get_python_lib_zip
 from util import milestones_helpers
-<<<<<<< HEAD
-from verify_student.services import ReverificationService
-from openedx.core.lib.inline_analytics_utils import add_inline_analytics
-=======
 from lms.djangoapps.verify_student.services import ReverificationService
->>>>>>> kluo/2015-12-01
 
 from edx_proctoring.services import ProctoringService
 from openedx.core.djangoapps.credit.services import CreditService
