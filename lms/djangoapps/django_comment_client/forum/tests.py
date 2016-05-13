@@ -18,6 +18,7 @@ from django_comment_client.tests.group_id import (
 from django_comment_client.tests.unicode import UnicodeTestMixin
 from django_comment_client.tests.utils import CohortedTestCase
 from django_comment_client.utils import strip_none
+from student.models import UserProfile
 from student.tests.factories import UserFactory, CourseEnrollmentFactory
 from util.testing import UrlResetMixin
 from openedx.core.djangoapps.util.testing import ContentGroupTestCase
@@ -35,12 +36,7 @@ from mock import patch, Mock, ANY, call
 
 from openedx.core.djangoapps.course_groups.models import CourseUserGroup
 
-<<<<<<< HEAD
-from teams.tests.factories import CourseTeamFactory
-from student.models import UserProfile
-=======
 from lms.djangoapps.teams.tests.factories import CourseTeamFactory
->>>>>>> kluo/2015-12-01
 
 log = logging.getLogger(__name__)
 
@@ -342,19 +338,11 @@ class SingleThreadQueryCountTestCase(ModuleStoreTestCase):
 
     @ddt.data(
         # old mongo with cache
-<<<<<<< HEAD
-        (ModuleStoreEnum.Type.mongo, 1, 6, 4, 15, 8),
-        (ModuleStoreEnum.Type.mongo, 50, 6, 4, 15, 8),
-        # split mongo: 3 queries, regardless of thread response size.
-        (ModuleStoreEnum.Type.split, 1, 3, 3, 15, 8),
-        (ModuleStoreEnum.Type.split, 50, 3, 3, 15, 8),
-=======
         (ModuleStoreEnum.Type.mongo, 1, 6, 4, 16, 8),
         (ModuleStoreEnum.Type.mongo, 50, 6, 4, 16, 8),
         # split mongo: 3 queries, regardless of thread response size.
         (ModuleStoreEnum.Type.split, 1, 3, 3, 16, 8),
         (ModuleStoreEnum.Type.split, 50, 3, 3, 16, 8),
->>>>>>> kluo/2015-12-01
     )
     @ddt.unpack
     def test_number_of_mongo_queries(
