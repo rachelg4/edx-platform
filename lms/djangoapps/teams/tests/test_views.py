@@ -114,7 +114,7 @@ class TestDashboard(SharedModuleStoreTestCase):
         self.client.login(username=self.user.username, password=self.test_password)
 
         # Check the query count on the dashboard With no teams
-        with self.assertNumQueries(17):
+        with self.assertNumQueries(19):
             self.client.get(self.teams_url)
 
         # Create some teams
@@ -129,11 +129,7 @@ class TestDashboard(SharedModuleStoreTestCase):
         team.add_user(self.user)
 
         # Check the query count on the dashboard again
-<<<<<<< HEAD
-        with self.assertNumQueries(22):
-=======
-        with self.assertNumQueries(23):
->>>>>>> kluo/2015-12-01
+        with self.assertNumQueries(25):
             self.client.get(self.teams_url)
 
     def test_bad_course_id(self):
