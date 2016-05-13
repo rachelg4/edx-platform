@@ -378,17 +378,10 @@ class ViewsQueryCountTestCase(UrlResetMixin, ModuleStoreTestCase, MockRequestSet
         return inner
 
     @ddt.data(
-<<<<<<< HEAD
-        (ModuleStoreEnum.Type.mongo, 3, 4, 23),
-        (ModuleStoreEnum.Type.mongo, 20, 4, 23),
-        (ModuleStoreEnum.Type.split, 3, 13, 23),
-        (ModuleStoreEnum.Type.split, 20, 13, 23),
-=======
-        (ModuleStoreEnum.Type.mongo, 3, 4, 26),
-        (ModuleStoreEnum.Type.mongo, 20, 4, 26),
-        (ModuleStoreEnum.Type.split, 3, 13, 26),
-        (ModuleStoreEnum.Type.split, 20, 13, 26),
->>>>>>> kluo/2015-12-01
+        (ModuleStoreEnum.Type.mongo, 3, 4, 27),
+        (ModuleStoreEnum.Type.mongo, 20, 4, 27),
+        (ModuleStoreEnum.Type.split, 3, 13, 27),
+        (ModuleStoreEnum.Type.split, 20, 13, 27),
     )
     @ddt.unpack
     @count_queries
@@ -396,17 +389,10 @@ class ViewsQueryCountTestCase(UrlResetMixin, ModuleStoreTestCase, MockRequestSet
         self.create_thread_helper(mock_request)
 
     @ddt.data(
-<<<<<<< HEAD
-        (ModuleStoreEnum.Type.mongo, 3, 3, 17),
-        (ModuleStoreEnum.Type.mongo, 20, 3, 17),
-        (ModuleStoreEnum.Type.split, 3, 10, 17),
-        (ModuleStoreEnum.Type.split, 20, 10, 17),
-=======
-        (ModuleStoreEnum.Type.mongo, 3, 3, 20),
-        (ModuleStoreEnum.Type.mongo, 20, 3, 20),
-        (ModuleStoreEnum.Type.split, 3, 10, 20),
-        (ModuleStoreEnum.Type.split, 20, 10, 20),
->>>>>>> kluo/2015-12-01
+        (ModuleStoreEnum.Type.mongo, 3, 3, 21),
+        (ModuleStoreEnum.Type.mongo, 20, 3, 21),
+        (ModuleStoreEnum.Type.split, 3, 10, 21),
+        (ModuleStoreEnum.Type.split, 20, 10, 21),
     )
     @ddt.unpack
     @count_queries
