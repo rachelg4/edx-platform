@@ -32,23 +32,13 @@ from instructor_task.api import (
 
 from instructor_task.api_helper import AlreadyRunningError
 from instructor_task.models import InstructorTask, PROGRESS
-<<<<<<< HEAD
 from instructor_task.tasks import get_ora2_responses, get_course_forums_usage, get_student_forums_usage
-from instructor_task.tests.test_base import (
-    InstructorTaskTestCase,
-    InstructorTaskCourseTestCase,
-    InstructorTaskModuleTestCase,
-    TestReportMixin,
-    TEST_COURSE_KEY
-)
-=======
 from instructor_task.tests.test_base import (InstructorTaskTestCase,
                                              InstructorTaskCourseTestCase,
                                              InstructorTaskModuleTestCase,
                                              TestReportMixin,
                                              TEST_COURSE_KEY)
 from certificates.models import CertificateStatuses
->>>>>>> kluo/2015-12-01
 
 
 class InstructorTaskReportTest(InstructorTaskTestCase):
