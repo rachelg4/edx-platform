@@ -868,11 +868,7 @@ class ProgressPageTests(ModuleStoreTestCase):
         self.assertContains(resp, u"Download Your Certificate")
 
     @ddt.data(
-<<<<<<< HEAD
-        *itertools.product(((21, 4, True), (21, 4, False)), (True, False))
-=======
-        *itertools.product(((38, 4, True), (38, 4, False)), (True, False))
->>>>>>> kluo/2015-12-01
+        *itertools.product(((40, 4, True), (40, 4, False)), (True, False))
     )
     @ddt.unpack
     def test_query_counts(self, (sql_calls, mongo_calls, self_paced), self_paced_enabled):
