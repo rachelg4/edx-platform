@@ -555,6 +555,9 @@ TEMPLATES = [
                 # Shoppingcart processor (detects if request.user has a cart)
                 'shoppingcart.context_processor.user_has_cart_context_processor',
 
+                # Include TEMPLATE_VISIBLE_SETTINGS in templates
+                'settings_context_processor.context_processors.settings',
+
                 # Allows the open edX footer to be leveraged in Django Templates.
                 'edxmako.shortcuts.microsite_footer_context_processor',
             ],
@@ -565,39 +568,7 @@ TEMPLATES = [
 ]
 DEFAULT_TEMPLATE_ENGINE = TEMPLATES[0]
 
-<<<<<<< HEAD
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.request',
-    'django.core.context_processors.static',
-    'django.contrib.messages.context_processors.messages',
-    'django.core.context_processors.i18n',
-    'django.contrib.auth.context_processors.auth',  # this is required for admin
-    'django.core.context_processors.csrf',
-
-    # Added for django-wiki
-    'django.core.context_processors.media',
-    'django.core.context_processors.tz',
-    'django.contrib.messages.context_processors.messages',
-    'sekizai.context_processors.sekizai',
-
-    # Hack to get required link URLs to password reset templates
-    'edxmako.shortcuts.marketing_link_context_processor',
-
-    # Include TEMPLATE_VISIBLE_SETTINGS in templates
-    'settings_context_processor.context_processors.settings',
-
-    # Allows the open edX footer to be leveraged in Django Templates.
-    'edxmako.shortcuts.open_source_footer_context_processor',
-
-    # Shoppingcart processor (detects if request.user has a cart)
-    'shoppingcart.context_processor.user_has_cart_context_processor',
-
-    # Allows the open edX footer to be leveraged in Django Templates.
-    'edxmako.shortcuts.microsite_footer_context_processor',
-)
-=======
 ###############################################################################################
->>>>>>> kluo/2015-12-01
 
 # use the ratelimit backend to prevent brute force attacks
 AUTHENTICATION_BACKENDS = (
@@ -1879,11 +1850,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.staticfiles',
     'djcelery',
-<<<<<<< HEAD
     'settings_context_processor',
-    'south',
-=======
->>>>>>> kluo/2015-12-01
 
     # Common views
     'openedx.core.djangoapps.common_views',
@@ -2875,7 +2842,13 @@ PROCTORING_BACKEND_PROVIDER = {
 }
 PROCTORING_SETTINGS = {}
 
-<<<<<<< HEAD
+#### Custom Courses for EDX (CCX) configuration
+
+# This is an arbitrary hard limit.
+# The reason we introcuced this number is because we do not want the CCX
+# to compete with the MOOC.
+CCX_MAX_STUDENTS_ALLOWED = 200
+
 STUDENT_RESPONSES_REPORT_SUPPORTED_TYPES = set([
     'problem',
     'submit-and-compare',
@@ -2886,11 +2859,3 @@ STUDENT_RESPONSES_REPORT_SUPPORTED_TYPES = set([
 TYPES_WITH_CHILD_PROBLEMS_LIST = [
     'library_content',
 ]
-=======
-#### Custom Courses for EDX (CCX) configuration
-
-# This is an arbitrary hard limit.
-# The reason we introcuced this number is because we do not want the CCX
-# to compete with the MOOC.
-CCX_MAX_STUDENTS_ALLOWED = 200
->>>>>>> kluo/2015-12-01
