@@ -197,7 +197,6 @@ def xblock_handler(request, usage_key_string):
         )
 
 
-<<<<<<< HEAD
 class StudioPermissionsService(object):
     """
     Service that can provide information about a user's permissions.
@@ -241,9 +240,6 @@ class StudioEditModuleRuntime(object):
         return None
 
 
-# pylint: disable=unused-argument
-=======
->>>>>>> kluo/2015-12-01
 @require_http_methods(("GET"))
 @login_required
 @expect_json
