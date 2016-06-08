@@ -41,8 +41,8 @@ git+https://github.com/edx/lettuce.git@0.2.20.002#egg=lettuce==0.2.20.002
 -e git+https://github.com/edx/event-tracking.git@0.2.1#egg=event-tracking==0.2.1
 -e git+https://github.com/edx/django-splash.git@v0.2#egg=django-splash==0.2
 -e git+https://github.com/edx/acid-block.git@e46f9cda8a03e121a00c7e347084d142d22ebfb7#egg=acid-xblock
--e git+https://github.com/Stanford-Online/edx-ora2.git@af51177a6036634673ceaa00c1ee89f979a1fca0#egg=edx-ora2
--e git+https://github.com/Stanford-Online/edx-submissions.git@c9c2881b864c5e16bb5dcbaed7a776d156ee98dc#egg=edx-submissions
+-e git+https://github.com/Stanford-Online/edx-ora2.git@50ee6ba68aef73220faf58dde48252f746f27304#egg=edx-ora2
+-e git+https://github.com/Stanford-Online/edx-submissions.git@e7b10267efba2f6198e5f8aa35fa6c5327dc7e4b#egg=edx-submissions
 # Note: Stanford-Online's fork of xblock-submit-and-compare also depends on this exact version of opaque_keys:
 -e git+https://github.com/edx/opaque-keys.git@27dc382ea587483b1e3889a3d19cbd90b9023a06#egg=opaque-keys
 git+https://github.com/edx/ease.git@release-2015-07-14#egg=ease==0.1.3
